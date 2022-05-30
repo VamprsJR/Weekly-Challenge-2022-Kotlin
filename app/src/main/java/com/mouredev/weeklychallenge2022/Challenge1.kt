@@ -11,15 +11,22 @@ package com.mouredev.weeklychallenge2022
  * Un Anagrama consiste en formar una palabra reordenando TODAS las letras de otra palabra inicial.
  * NO hace falta comprobar que ambas palabras existan.
  * Dos palabras exactamente iguales no son anagrama.
+ *
+ * Información adicional:
+ * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.
+ * - Puedes hacer un Fork del repo y una Pull Request al repo original para que veamos tu solución aportada.
+ * - Revisaré el ejercicio en directo desde Twitch el lunes siguiente al de su publicación.
+ * - Subiré una posible solución al ejercicio el lunes siguiente al de su publicación.
+ *
  */
 
-"""solucion  del reto 1 con el lenguaje python"""
+fun main() {
+    println(isAnagram("amor", "roma"))
+}
 
-def Anagrama(string1 , string2):
-    return sorted(string1)==sorted(string2)
-
-string1= input("escribe una primera palabra : ")
-string2= input("escribe una segunda palabra : ")
-string3= string1.lower()
-string4= string2.lower()
-print(Anagrama(string3, string4))
+private fun isAnagram(wordOne: String, wordTwo: String): Boolean {
+    if (wordOne.lowercase() == wordTwo.lowercase()) {
+        return false
+    }
+    return wordOne.lowercase().toCharArray().sortedArray().contentEquals(wordTwo.lowercase().toCharArray().sortedArray())
+}
