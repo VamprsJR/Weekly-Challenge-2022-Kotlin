@@ -21,17 +21,17 @@ import java.math.BigInteger
  *
  */
 
- 
-def main(n):
-    a = 0
-    b = 1
-    for k in range(n):
-        c = a+b ,
-        a = b
-        b = c
-    return b
-"""El siguiente input es totalmente opcional, tambien se puede cambiar la variable f por algun numero """
-f=int(input("ingrese la cantidad de secuacia de fibonacci quiere que de se calcular: ")) 
-for x in range(f):
-    print(main(x))
+fun main() {
 
+    var n0: Long = 0
+    var n1: Long = 1
+
+    (1..50).forEach { _ ->
+
+        println(n0)
+
+        val fib = n0 + n1
+        n0 = n1
+        n1 = fib
+    }
+}
