@@ -18,29 +18,13 @@ package com.mouredev.weeklychallenge2022
  *
  */
 
-fun main() {
-
-    (1..100).forEach { number ->
-        if (isPrime(number)) {
-            println(number)
-        }
-    }
-}
-
-private fun isPrime(number: Int): Boolean {
-
-    if (number < 2) {
-        return false
-    }
-
-    for (i in 2 until number) {
-        if (number % i == 0) {
-            return false
-        }
-    }
-
-    return true
-}
-
-
-
+def Numprimo(): 
+    numero=1
+    while numero <=100:
+        contador =1
+        x=0
+        while  contador <= numero: 
+            if numero % contador == 0: x=x+1 
+            contador = contador +1
+        if x==2: print(numero) 
+        numero = numero + 1 + 1
